@@ -6,8 +6,7 @@ with open("input.txt") as f:
             calories.append(c)
             c = 0
             continue
-        line = int(line)
-        c += line
+        c += int(line)
     calories.append(c)
     calories.sort(reverse=True)
         
