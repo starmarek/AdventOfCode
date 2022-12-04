@@ -9,7 +9,7 @@ with open("input.txt") as f:
         c += int(line)
     calories.append(c)
     calories.sort(reverse=True)
-        
 
-print(max(calories)) # first star
+
+print(max(calories))  # first star
 print(sum(calories[:3]))  # second star
