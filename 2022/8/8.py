@@ -26,9 +26,9 @@ for item in it:
         continue
 
     top = grid[:current_row, current_column]
-    bottom = grid[current_row + 1 :, current_column]
+    bottom = grid[current_row + 1 :, current_column]  # noqa E203
     left = grid[current_row, :current_column]
-    right = grid[current_row, current_column + 1 :]
+    right = grid[current_row, current_column + 1 :]  # noqa E203
 
     if any(
         item > biggest_tree
@@ -47,9 +47,9 @@ for item in it:
         continue
 
     top = list(reversed(grid[:current_row, current_column]))
-    bottom = grid[current_row + 1 :, current_column]
+    bottom = grid[current_row + 1 :, current_column]  # noqa E203
     left = list(reversed(grid[current_row, :current_column]))
-    right = grid[current_row, current_column + 1 :]
+    right = grid[current_row, current_column + 1 :]  # noqa E203
 
     scores = []
     for direction in [top, bottom, left, right]:
