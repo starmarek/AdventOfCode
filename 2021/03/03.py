@@ -1,7 +1,7 @@
 import collections
 import os
 
-with open(os.path.dirname(__file__) + "/data") as data_file:
+with open(os.path.dirname(__file__) + "/input.txt") as data_file:
     data = [line.rstrip() for line in data_file]
 
 len_of_digits = len(data[0])
@@ -48,15 +48,4 @@ least_common_bits = flip_binary(most_common_bits)
 most_common_bits_int = int(most_common_bits, 2)
 least_common_bits_int = int(least_common_bits, 2)
 
-print(most_common_bits_int * least_common_bits_int)  # 1
-
-
-bit_criteria = 1
-a = reduce_digits_by_critera(bit_criteria, data.copy())
-bit_criteria = 0
-b = reduce_digits_by_critera(bit_criteria, data.copy())
-
-a = int(a.pop(), 2)
-b = int(b.pop(), 2)
-
-print(a * b)
+print(most_common_bits_int * least_common_bits_int)  # first star
