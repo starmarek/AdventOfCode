@@ -7,4 +7,4 @@
 | 2019 |   00/25   | ![](https://progress-bar.dev/0/)  |
 | 2020 |   9/25    | ![](https://progress-bar.dev/36/) |
 | 2021 |   2/25    | ![](https://progress-bar.dev/8/)  |
-| 2022 |   10/25   | ![](https://progress-bar.dev/40/) |
+| 2022 |   11/25   | ![](https://progress-bar.dev/44/) |
