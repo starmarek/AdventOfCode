@@ -12,5 +12,5 @@ for index in range(1, len(data)):
     except IndexError:
         pass
 
-print(tree2)
-print(tree1 * tree2 * tree3 * tree4 * tree5)
+print(tree2)  # first star
+print(tree1 * tree2 * tree3 * tree4 * tree5)  # second star

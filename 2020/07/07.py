@@ -10,6 +10,7 @@ with open("input.txt") as f:
     )
     data = {key: val.strip(" .").split(",  ") for key, val in data.items()}
 
+
 @cache
 def check_bag(bag):
     if looking_for in bag:
@@ -19,16 +20,16 @@ def check_bag(bag):
     for inner_bag in data[bag]:
         if check_bag(inner_bag):
             return True
-        
+
+
 for inner_bags in data.values():
     for bag in inner_bags:
         if check_bag(bag):
             found += 1
             break
 
-print(found)
+print(found)  # first star
 
-### second star
 
 with open("input.txt") as f:
     data = dict(
@@ -49,7 +50,7 @@ def count_bag(bag):
         sum_ += int(count) + int(count) * inner_count
     return sum_
 
+
 output = count_bag("shiny gold")
 
-print(output)
-
+print(output)  # second star

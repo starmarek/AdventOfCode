@@ -32,4 +32,5 @@ for line in data:
             )
         passport = {}
 
-print(valid_passports_one_star, valid_passports_two_star)
+print(valid_passports_one_star)  # first star
+print(valid_passports_two_star)  # second star

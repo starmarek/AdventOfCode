@@ -28,5 +28,6 @@ for line in data:
     sid += rang[0]
     sidlist.append(sid)
 sidlist.sort()
-print(max(sidlist))
-print(set(range(sidlist[0], sidlist[-1])).difference(sidlist))
+
+print(max(sidlist))  # first star
+print(set(range(sidlist[0], sidlist[-1])).difference(sidlist))  # second star

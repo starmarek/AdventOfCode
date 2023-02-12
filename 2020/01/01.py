@@ -11,5 +11,5 @@ def get_prod(amount_of_numbers_in_combination):
             return prod(combination)
 
 
-print(get_prod(2))
-print(get_prod(3))
+print(get_prod(2))  # first star
+print(get_prod(3))  # second star

@@ -7,7 +7,7 @@ with open("input.txt", "r") as f:
 
 answer_two_star = 0
 for group in data_two_stars:
-    answer += len(group[0].intersection(*group[1:]))
+    answer_two_star += len(group[0].intersection(*group[1:]))
 
-print(sum(data_one_star))
-print(answer_two_star)
+print(sum(data_one_star))  # first star
+print(answer_two_star)  # second star

@@ -11,4 +11,4 @@ with open("input.txt") as f:
     # [86, 149, 4, 75, 87, 132, 12, 115, 62, 61, 153, 78, 138 ...]
 
 diffs = [data[i + 1] - data[i] for i in range(len(data) - 1)]
-print(reduce(mul, Counter(diffs).values()))
+print(reduce(mul, Counter(diffs).values()))  # first star

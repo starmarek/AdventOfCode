@@ -13,8 +13,8 @@ def is_sum_of_two(data, number):
 
 
 for i in range(26, len(data)):
-    if not is_sum_of_two(data[i-25:i], data[i]):
-        print(data[i])
+    if not is_sum_of_two(data[i - 25 : i], data[i]):  # noqa E203
+        print(data[i])  # first star
         break
 
 
@@ -23,7 +23,7 @@ number = 556543474
 for i in range(len(data)):
     for j in range(i, len(data)):
         if sum(data[i:j]) == number and len(data[i:j]) > 1:
-            print(max(data[i:j]) + min(data[i:j]))
+            print(max(data[i:j]) + min(data[i:j]))  # second star
             break
     else:
         continue

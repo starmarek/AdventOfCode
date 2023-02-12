@@ -31,10 +31,9 @@ while True:
     item = data[current_position]
     procedure(item)
 
-print(accumulator)
+print(accumulator)  # first star
 
 
-# part 2
 @contextmanager
 def stub_data(index, to_stub):
     original = data[index]
@@ -67,4 +66,4 @@ for i in range(len(data)):
             break
 
 
-print(accumulator)
+print(accumulator)  # second star

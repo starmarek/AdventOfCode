@@ -21,4 +21,5 @@ for expr in data:
     ):
         valid_pass_count_2_star += 1
 
-print(valid_pass_count_1_star, valid_pass_count_2_star)
+print(valid_pass_count_1_star)  # first star
+print(valid_pass_count_2_star)  # second star
