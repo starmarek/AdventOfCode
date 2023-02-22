@@ -20,14 +20,14 @@ def create_cave(data):
         for cord1, cord2 in itertools.pairwise(line):
             if cord1[0] != cord2[0]:
                 if cord1[0] < cord2[0]:
-                    cave[cord1[1], cord1[0] - 1 : cord2[0]] = "#"
+                    cave[cord1[1], cord1[0] - 1 : cord2[0]] = "#"  # noqa E203
                 else:
-                    cave[cord1[1], cord2[0] - 1 : cord1[0]] = "#"
+                    cave[cord1[1], cord2[0] - 1 : cord1[0]] = "#"  # noqa E203
             else:
                 if cord1[1] < cord2[1]:
-                    cave[cord1[1] : cord2[1], cord1[0] - 1] = "#"
+                    cave[cord1[1] : cord2[1], cord1[0] - 1] = "#"  # noqa E203
                 else:
-                    cave[cord2[1] : cord1[1], cord1[0] - 1] = "#"
+                    cave[cord2[1] : cord1[1], cord1[0] - 1] = "#"  # noqa E203
     return cave
 
 
