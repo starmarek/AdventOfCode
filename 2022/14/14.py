@@ -31,21 +31,27 @@ def create_cave(data):
     return cave
 
 
+def move_sand(cave, sand):
+    if cave[sand[1] + 1][sand[0]] not in "o#":
+        sand[1] += 1
+    elif cave[sand[1] + 1][sand[0] - 1] not in "o#":
+        sand[1] += 1
+        sand[0] -= 1
+    elif cave[sand[1] + 1][sand[0] + 1] not in "o#":
+        sand[1] += 1
+        sand[0] += 1
+    else:
+        cave[sand[1]][sand[0]] = "o"
+        sand = [499, 0]
+
+    return sand
+
+
 def simulate1(cave):
     sand = [499, 0]
     while True:
         try:
-            if cave[sand[1] + 1][sand[0]] not in "o#":
-                sand[1] += 1
-            elif cave[sand[1] + 1][sand[0] - 1] not in "o#":
-                sand[1] += 1
-                sand[0] -= 1
-            elif cave[sand[1] + 1][sand[0] + 1] not in "o#":
-                sand[1] += 1
-                sand[0] += 1
-            else:
-                cave[sand[1]][sand[0]] = "o"
-                sand = [499, 0]
+            sand = move_sand(cave, sand)
         except IndexError:
             break
 
@@ -53,17 +59,7 @@ def simulate1(cave):
 def simulate2(cave):
     sand = [499, 0]
     while cave[0, 499] != "o":
-        if cave[sand[1] + 1][sand[0]] not in "o#":
-            sand[1] += 1
-        elif cave[sand[1] + 1][sand[0] - 1] not in "o#":
-            sand[1] += 1
-            sand[0] -= 1
-        elif cave[sand[1] + 1][sand[0] + 1] not in "o#":
-            sand[1] += 1
-            sand[0] += 1
-        else:
-            cave[sand[1]][sand[0]] = "o"
-            sand = [499, 0]
+        sand = move_sand(cave, sand)
 
 
 cave = create_cave(data)
