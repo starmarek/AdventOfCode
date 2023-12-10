@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 word2number = "*"
 regex = "*"
+numpy = "*"
+networkx = "*"
+matplotlib = "*"
+scipy = "*"
 
 [dev-packages]
 flake8 = "*"
